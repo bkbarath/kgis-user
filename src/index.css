@@ -1,0 +1,110 @@
+/* @import url("./styles/globals.css");
+@import url("./styles/fonts/outfit.css"); */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 12px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --font-primary: "Poppins", sans-serif;
+  --primary-purple: #5933ee;
+
+  --light-blue-background: #eff4f7;
+  --light-grey-background: #e5e4eb;
+
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+
+  --border: rgba(132, 132, 132, 0.948);
+
+  --muted-background: #ececf0;
+  --muted-foreground: #717182;
+  /* Success */
+  --success-background: #c0f5d9;
+  --success-foreground: #04ac53;
+
+  /* Warning */
+  --warning-background: #fce2b0;
+  --warning-foreground: #d45505;
+
+  /* Danger */
+  --danger-background: #fad1d1;
+  --danger-foreground: #d90a0a;
+
+  --info-background: #e0f2fe;
+  --info-foreground: #0369a1;
+
+  --gradient-from: #66a5eb;
+  /* --color-gradient-via: #4b0082; */
+  --gradient-to: #a640dd;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+
+  --light-blue-background: #a2a2a2;
+
+  --border: oklch(35% 0.006 27);
+
+  --muted-background: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+
+  /* Success */
+  --success-background: #052e16;
+  --success-foreground: #bbf7d0;
+
+  /* Warning */
+  --warning-background: #78350f;
+  --warning-foreground: #fef08a;
+
+  /* Danger */
+  --danger-background: #450a0a;
+  --danger-foreground: #fecaca;
+
+  --info-background: #082f49;
+  --info-foreground: #bae6fd;
+
+  --color-gradient-from: #66a5eb;
+  /* --color-gradient-via: #4b0082; */
+  --color-gradient-to: #a640dd;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-light-blue-background: var(--light-blue-background);
+  --color-light-grey-background: var(--light-grey-background);
+
+  --color-primary-purple: var(--primary-purple);
+
+  --color-border: var(--border);
+
+  --color-muted-background: var(--muted-background);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-success-background: var(--success-background);
+  --color-success-foreground: var(--success-foreground);
+
+  --color-warning-background: var(--warning-background);
+  --color-warning-foreground: var(--warning-foreground);
+
+  --color-danger-background: var(--danger-background);
+  --color-danger-foreground: var(--danger-foreground);
+
+  --color-info-background: var(--info-background);
+  --color-info-foreground: var(--info-foreground);
+
+  --color-gradient-from: #66a5eb;
+  /* --color-gradient-via: #4b0082; */
+  --color-gradient-to: #a640dd;
+}

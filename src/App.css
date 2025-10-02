@@ -1,0 +1,58 @@
+@layer components {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    box-shadow: none;
+  }
+
+  body {
+    font-family: var(--font-primary);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .upload {
+    position: relative;
+    overflow: hidden;
+    animation: upload 1s infinite linear;
+  }
+
+  .ping-once {
+    animation: ping-once 1s 1 cubic-bezier(0, 0, 0.2, 1) forwards;
+  }
+
+  @keyframes ping-once {
+    0% {
+      transform: scale(0.5);
+    }
+
+    75%,
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes upload {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+}
